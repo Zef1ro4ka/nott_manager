@@ -1,0 +1,707 @@
+2025-05-20 13:52:51,225 - __main__ - INFO - Бот запущено
+2025-05-20 13:52:51,226 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 13:52:51,357 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 13:53:12,896 - aiogram.event - INFO - Update id=557039932 is handled. Duration 177 ms by bot id=7415615009
+2025-05-20 13:54:42,542 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 13:54:42,807 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 13:54:49,672 - __main__ - INFO - Бот запущено
+2025-05-20 13:54:49,672 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 13:54:49,791 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 13:54:51,286 - aiogram.event - INFO - Update id=557039933 is handled. Duration 149 ms by bot id=7415615009
+2025-05-20 13:56:39,022 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 13:56:39,280 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 13:57:25,095 - __main__ - INFO - Бот запущено
+2025-05-20 13:57:25,096 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 13:57:25,214 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 13:57:29,166 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 13:57:29,426 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:04:33,128 - __main__ - INFO - Бот запущено
+2025-05-20 17:04:33,129 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:04:33,282 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:04:41,433 - aiogram.event - INFO - Update id=557039934 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 17:04:41,433 - aiogram.event - ERROR - Cause exception while process update id=557039934 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\app\disp.py", line 12, in cmd_start
+    await message.answer("Hello", reply_markup=kb.main_kb)
+          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\types\message.py", line 2074, in answer
+    return SendMessage(
+           ~~~~~~~~~~~^
+        chat_id=self.chat.id,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).as_(self._bot)
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<function main_kb at 0x0000018DA0880B80>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<function main_kb at 0x0000018DA0880B80>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<function main_kb at 0x0000018DA0880B80>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<function main_kb at 0x0000018DA0880B80>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-20 17:07:09,571 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 17:07:09,825 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:07:12,651 - __main__ - INFO - Бот запущено
+2025-05-20 17:07:12,652 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:07:12,774 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:07:14,878 - aiogram.event - INFO - Update id=557039935 is handled. Duration 169 ms by bot id=7415615009
+2025-05-20 17:07:32,162 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 17:07:32,426 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:07:35,011 - __main__ - INFO - Бот запущено
+2025-05-20 17:07:35,012 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:07:35,133 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:07:37,559 - aiogram.event - INFO - Update id=557039936 is handled. Duration 249 ms by bot id=7415615009
+2025-05-20 17:08:01,618 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 17:08:01,869 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:08:04,695 - __main__ - INFO - Бот запущено
+2025-05-20 17:08:04,695 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:08:04,813 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:08:05,006 - aiogram.event - INFO - Update id=557039937 is handled. Duration 150 ms by bot id=7415615009
+2025-05-20 17:08:12,289 - aiogram.event - INFO - Update id=557039938 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 17:08:12,859 - aiogram.event - INFO - Update id=557039939 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 17:28:01,147 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 17:28:01,406 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:28:04,193 - __main__ - INFO - Бот запущено
+2025-05-20 17:28:04,193 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:28:04,314 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:28:07,198 - aiogram.event - INFO - Update id=557039940 is handled. Duration 176 ms by bot id=7415615009
+2025-05-20 17:34:50,874 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 17:34:51,131 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:34:54,540 - __main__ - INFO - Бот запущено
+2025-05-20 17:34:54,541 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 17:34:54,665 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 17:34:56,016 - aiogram.event - INFO - Update id=557039941 is handled. Duration 165 ms by bot id=7415615009
+2025-05-20 17:34:58,175 - aiogram.event - INFO - Update id=557039942 is handled. Duration 137 ms by bot id=7415615009
+2025-05-20 17:34:59,598 - aiogram.event - INFO - Update id=557039943 is handled. Duration 91 ms by bot id=7415615009
+2025-05-20 17:35:00,954 - aiogram.event - INFO - Update id=557039944 is handled. Duration 77 ms by bot id=7415615009
+2025-05-20 17:35:02,095 - aiogram.event - INFO - Update id=557039945 is handled. Duration 65 ms by bot id=7415615009
+2025-05-20 17:35:03,096 - aiogram.event - INFO - Update id=557039946 is handled. Duration 61 ms by bot id=7415615009
+2025-05-20 18:23:34,292 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:23:34,552 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:23:37,358 - __main__ - INFO - Бот запущено
+2025-05-20 18:23:37,358 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:23:37,483 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:23:44,715 - aiogram.event - INFO - Update id=557039947 is handled. Duration 148 ms by bot id=7415615009
+2025-05-20 18:23:48,221 - aiogram.event - INFO - Update id=557039948 is handled. Duration 141 ms by bot id=7415615009
+2025-05-20 18:24:00,820 - aiogram.event - INFO - Update id=557039949 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 18:24:00,820 - aiogram.event - ERROR - Cause exception while process update id=557039949 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\app\disp.py", line 33, in add_notes
+    reply_markup=kb.list_tegs())
+                 ~~~~~~~~~~~~^^
+TypeError: list_tegs() missing 1 required positional argument: 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-20 18:24:12,340 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:24:12,599 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:24:15,263 - __main__ - INFO - Бот запущено
+2025-05-20 18:24:15,264 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:24:15,384 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:24:19,781 - aiogram.event - INFO - Update id=557039950 is handled. Duration 205 ms by bot id=7415615009
+2025-05-20 18:24:21,240 - aiogram.event - INFO - Update id=557039951 is handled. Duration 297 ms by bot id=7415615009
+2025-05-20 18:24:24,725 - aiogram.event - INFO - Update id=557039952 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 18:24:24,726 - aiogram.event - ERROR - Cause exception while process update id=557039952 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\app\disp.py", line 30, in add_notes
+    text = message.text()
+TypeError: 'str' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-20 18:26:08,827 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:26:09,082 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:26:11,815 - __main__ - INFO - Бот запущено
+2025-05-20 18:26:11,815 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:26:11,936 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:26:12,371 - aiogram.event - INFO - Update id=557039953 is handled. Duration 162 ms by bot id=7415615009
+2025-05-20 18:26:15,404 - aiogram.event - INFO - Update id=557039954 is handled. Duration 203 ms by bot id=7415615009
+2025-05-20 18:26:18,044 - aiogram.event - INFO - Update id=557039955 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 18:26:18,044 - aiogram.event - ERROR - Cause exception while process update id=557039955 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\app\disp.py", line 32, in procces_add_notes
+    await message.answer("Тепер виберіть категорію або введіть нову якщо її немає в списку",reply_markup=kb.list_tegs(user_id=message.from_user.id))
+          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\types\message.py", line 2074, in answer
+    return SendMessage(
+           ~~~~~~~~~~~^
+        chat_id=self.chat.id,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).as_(self._bot)
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<coroutine object list_tegs at 0x00000266DFFAAF80>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<coroutine object list_tegs at 0x00000266DFFAAF80>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<coroutine object list_tegs at 0x00000266DFFAAF80>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<coroutine object list_tegs at 0x00000266DFFAAF80>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-20 18:26:56,428 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:26:56,690 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:26:59,819 - __main__ - INFO - Бот запущено
+2025-05-20 18:26:59,819 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:26:59,939 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:27:00,420 - aiogram.event - INFO - Update id=557039956 is handled. Duration 148 ms by bot id=7415615009
+2025-05-20 18:27:01,468 - aiogram.event - INFO - Update id=557039957 is handled. Duration 143 ms by bot id=7415615009
+2025-05-20 18:27:04,953 - aiogram.event - INFO - Update id=557039958 is handled. Duration 103 ms by bot id=7415615009
+2025-05-20 18:28:02,332 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:28:02,590 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:28:05,267 - __main__ - INFO - Бот запущено
+2025-05-20 18:28:05,267 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:28:05,383 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:28:07,522 - aiogram.event - INFO - Update id=557039959 is handled. Duration 175 ms by bot id=7415615009
+2025-05-20 18:28:08,641 - aiogram.event - INFO - Update id=557039960 is handled. Duration 197 ms by bot id=7415615009
+2025-05-20 18:28:11,153 - aiogram.event - INFO - Update id=557039961 is not handled. Duration 0 ms by bot id=7415615009
+2025-05-20 18:28:11,153 - aiogram.event - ERROR - Cause exception while process update id=557039961 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\app\disp.py", line 32, in procces_add_notes
+    print(state.get_data(text))
+          ~~~~~~~~~~~~~~^^^^^^
+TypeError: FSMContext.get_data() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\nott_manager\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-20 18:28:25,316 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:28:25,581 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:28:28,199 - __main__ - INFO - Бот запущено
+2025-05-20 18:28:28,200 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:28:28,319 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:28:28,568 - aiogram.event - INFO - Update id=557039962 is handled. Duration 208 ms by bot id=7415615009
+2025-05-20 18:28:29,694 - aiogram.event - INFO - Update id=557039963 is handled. Duration 272 ms by bot id=7415615009
+2025-05-20 18:28:34,194 - aiogram.event - INFO - Update id=557039964 is handled. Duration 62 ms by bot id=7415615009
+2025-05-20 18:30:10,908 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 18:30:11,164 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:30:15,053 - __main__ - INFO - Бот запущено
+2025-05-20 18:30:15,053 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 18:30:15,176 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 18:30:15,375 - aiogram.event - INFO - Update id=557039965 is handled. Duration 151 ms by bot id=7415615009
+2025-05-20 18:30:16,446 - aiogram.event - INFO - Update id=557039966 is handled. Duration 121 ms by bot id=7415615009
+2025-05-20 18:30:19,109 - aiogram.event - INFO - Update id=557039967 is handled. Duration 102 ms by bot id=7415615009
+2025-05-20 23:04:21,302 - __main__ - INFO - Бот запущено
+2025-05-20 23:04:21,307 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:04:21,458 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:04:32,521 - aiogram.event - INFO - Update id=557039968 is handled. Duration 150 ms by bot id=7415615009
+2025-05-20 23:04:33,437 - aiogram.event - INFO - Update id=557039969 is handled. Duration 118 ms by bot id=7415615009
+2025-05-20 23:04:36,699 - aiogram.event - INFO - Update id=557039970 is handled. Duration 57 ms by bot id=7415615009
+2025-05-20 23:05:29,467 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:05:29,732 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:05:32,573 - __main__ - INFO - Бот запущено
+2025-05-20 23:05:32,573 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:05:32,699 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:05:33,419 - aiogram.event - INFO - Update id=557039971 is handled. Duration 142 ms by bot id=7415615009
+2025-05-20 23:05:35,492 - aiogram.event - INFO - Update id=557039972 is handled. Duration 1290 ms by bot id=7415615009
+2025-05-20 23:05:36,900 - aiogram.event - INFO - Update id=557039973 is handled. Duration 65 ms by bot id=7415615009
+2025-05-20 23:07:39,586 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:07:39,839 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:07:42,523 - __main__ - INFO - Бот запущено
+2025-05-20 23:07:42,524 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:07:42,644 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:07:43,706 - aiogram.event - INFO - Update id=557039974 is handled. Duration 142 ms by bot id=7415615009
+2025-05-20 23:07:46,250 - aiogram.event - INFO - Update id=557039975 is handled. Duration 139 ms by bot id=7415615009
+2025-05-20 23:07:50,844 - aiogram.event - INFO - Update id=557039976 is handled. Duration 58 ms by bot id=7415615009
+2025-05-20 23:08:11,258 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:08:11,522 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:08:19,019 - __main__ - INFO - Бот запущено
+2025-05-20 23:08:19,020 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:08:19,149 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:08:19,337 - aiogram.event - INFO - Update id=557039977 is handled. Duration 142 ms by bot id=7415615009
+2025-05-20 23:08:20,941 - aiogram.event - INFO - Update id=557039978 is handled. Duration 126 ms by bot id=7415615009
+2025-05-20 23:08:23,324 - aiogram.event - INFO - Update id=557039979 is handled. Duration 59 ms by bot id=7415615009
+2025-05-20 23:08:43,730 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:08:43,986 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:08:46,662 - __main__ - INFO - Бот запущено
+2025-05-20 23:08:46,662 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:08:46,787 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:08:48,985 - aiogram.event - INFO - Update id=557039980 is handled. Duration 143 ms by bot id=7415615009
+2025-05-20 23:08:50,097 - aiogram.event - INFO - Update id=557039981 is handled. Duration 123 ms by bot id=7415615009
+2025-05-20 23:08:53,365 - aiogram.event - INFO - Update id=557039982 is handled. Duration 58 ms by bot id=7415615009
+2025-05-20 23:09:05,738 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:09:05,991 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:09:08,751 - __main__ - INFO - Бот запущено
+2025-05-20 23:09:08,751 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:09:08,869 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:09:09,059 - aiogram.event - INFO - Update id=557039983 is handled. Duration 149 ms by bot id=7415615009
+2025-05-20 23:09:10,342 - aiogram.event - INFO - Update id=557039984 is handled. Duration 119 ms by bot id=7415615009
+2025-05-20 23:09:12,887 - aiogram.event - INFO - Update id=557039985 is handled. Duration 63 ms by bot id=7415615009
+2025-05-20 23:12:54,290 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:12:54,555 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:12:57,293 - __main__ - INFO - Бот запущено
+2025-05-20 23:12:57,293 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:12:57,414 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:12:57,597 - aiogram.event - INFO - Update id=557039986 is handled. Duration 141 ms by bot id=7415615009
+2025-05-20 23:12:58,643 - aiogram.event - INFO - Update id=557039987 is handled. Duration 127 ms by bot id=7415615009
+2025-05-20 23:13:03,102 - aiogram.event - INFO - Update id=557039988 is handled. Duration 74 ms by bot id=7415615009
+2025-05-20 23:13:21,894 - aiogram.event - INFO - Update id=557039989 is handled. Duration 166 ms by bot id=7415615009
+2025-05-20 23:13:46,930 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:13:47,185 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:13:50,594 - __main__ - INFO - Бот запущено
+2025-05-20 23:13:50,595 - aiogram.dispatcher - INFO - Start polling
+2025-05-20 23:13:50,722 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-20 23:13:50,904 - aiogram.event - INFO - Update id=557039990 is handled. Duration 139 ms by bot id=7415615009
+2025-05-20 23:13:52,049 - aiogram.event - INFO - Update id=557039991 is handled. Duration 129 ms by bot id=7415615009
+2025-05-20 23:13:56,072 - aiogram.event - INFO - Update id=557039992 is handled. Duration 60 ms by bot id=7415615009
+2025-05-20 23:13:59,101 - aiogram.event - INFO - Update id=557039993 is handled. Duration 77 ms by bot id=7415615009
+2025-05-20 23:14:49,891 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-20 23:14:50,149 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
