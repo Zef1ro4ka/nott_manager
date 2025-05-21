@@ -705,3 +705,698 @@ TypeError: main.<locals>.handle_errors() missing 1 required positional argument:
 2025-05-20 23:13:59,101 - aiogram.event - INFO - Update id=557039993 is handled. Duration 77 ms by bot id=7415615009
 2025-05-20 23:14:49,891 - aiogram.dispatcher - INFO - Polling stopped
 2025-05-20 23:14:50,149 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 10:52:48,122 - __main__ - INFO - Бот запущено
+2025-05-21 10:52:48,124 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 10:52:48,266 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 10:53:09,681 - aiogram.event - INFO - Update id=557039994 is handled. Duration 158 ms by bot id=7415615009
+2025-05-21 10:53:11,468 - aiogram.event - INFO - Update id=557039995 is handled. Duration 283 ms by bot id=7415615009
+2025-05-21 10:53:16,425 - aiogram.event - INFO - Update id=557039996 is handled. Duration 186 ms by bot id=7415615009
+2025-05-21 10:53:20,756 - aiogram.event - INFO - Update id=557039997 is handled. Duration 82 ms by bot id=7415615009
+2025-05-21 10:53:32,307 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 10:53:32,309 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 10:53:32,309 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:01:14,108 - __main__ - INFO - Бот запущено
+2025-05-21 11:01:14,108 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:01:14,237 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:01:14,833 - aiogram.event - INFO - Update id=557039998 is handled. Duration 170 ms by bot id=7415615009
+2025-05-21 11:01:16,051 - aiogram.event - INFO - Update id=557039999 is handled. Duration 140 ms by bot id=7415615009
+2025-05-21 11:01:23,270 - aiogram.event - INFO - Update id=557040000 is handled. Duration 68 ms by bot id=7415615009
+2025-05-21 11:01:37,036 - aiogram.event - INFO - Update id=557040001 is not handled. Duration 76 ms by bot id=7415615009
+2025-05-21 11:01:37,037 - aiogram.event - ERROR - Cause exception while process update id=557040001 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/disp.py", line 46, in finis_add_notes
+    await DB.check_tags(user_id)
+  File "/home/zefirka/zefirka/nott_manager/app/database/database.py", line 27, in check_tags
+    cursor = await db.execute("ISELECT 1 FROM main WHERE tags = ?", (tag,))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: near "ISELECT": syntax error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-21 11:02:02,206 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:02:02,208 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:02:02,208 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:02:07,135 - __main__ - INFO - Бот запущено
+2025-05-21 11:02:07,136 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:02:07,272 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:02:07,587 - aiogram.event - INFO - Update id=557040002 is handled. Duration 261 ms by bot id=7415615009
+2025-05-21 11:02:12,939 - aiogram.event - INFO - Update id=557040003 is handled. Duration 157 ms by bot id=7415615009
+2025-05-21 11:02:15,730 - aiogram.event - INFO - Update id=557040004 is handled. Duration 135 ms by bot id=7415615009
+2025-05-21 11:02:21,555 - aiogram.event - INFO - Update id=557040005 is handled. Duration 173 ms by bot id=7415615009
+2025-05-21 11:06:40,606 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:06:40,608 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:06:40,609 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:06:46,363 - __main__ - INFO - Бот запущено
+2025-05-21 11:06:46,364 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:06:46,493 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:06:46,707 - aiogram.event - INFO - Update id=557040006 is handled. Duration 158 ms by bot id=7415615009
+2025-05-21 11:07:23,196 - aiogram.event - INFO - Update id=557040007 is handled. Duration 143 ms by bot id=7415615009
+2025-05-21 11:07:28,805 - aiogram.event - INFO - Update id=557040008 is handled. Duration 68 ms by bot id=7415615009
+2025-05-21 11:07:38,179 - aiogram.event - INFO - Update id=557040009 is handled. Duration 191 ms by bot id=7415615009
+2025-05-21 11:07:40,526 - aiogram.event - INFO - Update id=557040010 is handled. Duration 209 ms by bot id=7415615009
+2025-05-21 11:07:45,698 - aiogram.event - INFO - Update id=557040011 is handled. Duration 188 ms by bot id=7415615009
+2025-05-21 11:07:50,427 - aiogram.event - INFO - Update id=557040012 is handled. Duration 246 ms by bot id=7415615009
+2025-05-21 11:07:54,094 - aiogram.event - INFO - Update id=557040013 is handled. Duration 372 ms by bot id=7415615009
+2025-05-21 11:08:13,884 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:08:13,885 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:08:13,886 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:08:18,768 - __main__ - INFO - Бот запущено
+2025-05-21 11:08:18,768 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:08:18,894 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:08:19,401 - aiogram.event - INFO - Update id=557040014 is handled. Duration 165 ms by bot id=7415615009
+2025-05-21 11:08:20,490 - aiogram.event - INFO - Update id=557040015 is handled. Duration 136 ms by bot id=7415615009
+2025-05-21 11:08:25,321 - aiogram.event - INFO - Update id=557040016 is handled. Duration 92 ms by bot id=7415615009
+2025-05-21 11:08:32,282 - aiogram.event - INFO - Update id=557040017 is handled. Duration 413 ms by bot id=7415615009
+2025-05-21 11:08:36,009 - aiogram.event - INFO - Update id=557040018 is handled. Duration 69 ms by bot id=7415615009
+2025-05-21 11:09:07,749 - aiogram.event - INFO - Update id=557040019 is handled. Duration 155 ms by bot id=7415615009
+2025-05-21 11:09:14,782 - aiogram.event - INFO - Update id=557040020 is handled. Duration 111 ms by bot id=7415615009
+2025-05-21 11:09:20,377 - aiogram.event - INFO - Update id=557040021 is handled. Duration 209 ms by bot id=7415615009
+2025-05-21 11:09:23,653 - aiogram.event - INFO - Update id=557040022 is handled. Duration 188 ms by bot id=7415615009
+2025-05-21 11:09:26,709 - aiogram.event - INFO - Update id=557040023 is handled. Duration 82 ms by bot id=7415615009
+2025-05-21 11:10:50,694 - aiogram.event - INFO - Update id=557040024 is handled. Duration 159 ms by bot id=7415615009
+2025-05-21 11:10:52,970 - aiogram.event - INFO - Update id=557040025 is handled. Duration 160 ms by bot id=7415615009
+2025-05-21 11:10:56,962 - aiogram.event - INFO - Update id=557040026 is handled. Duration 147 ms by bot id=7415615009
+2025-05-21 11:20:53,526 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:20:53,528 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:20:53,528 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:20:59,073 - __main__ - INFO - Бот запущено
+2025-05-21 11:20:59,073 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:20:59,200 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:21:02,252 - aiogram.event - INFO - Update id=557040027 is handled. Duration 174 ms by bot id=7415615009
+2025-05-21 11:21:03,608 - aiogram.event - INFO - Update id=557040028 is handled. Duration 321 ms by bot id=7415615009
+2025-05-21 11:23:56,140 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:23:56,141 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:23:56,142 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:24:02,693 - __main__ - INFO - Бот запущено
+2025-05-21 11:24:02,694 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:24:02,829 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:24:03,053 - aiogram.event - INFO - Update id=557040029 is handled. Duration 171 ms by bot id=7415615009
+2025-05-21 11:24:06,841 - aiogram.event - INFO - Update id=557040030 is handled. Duration 139 ms by bot id=7415615009
+2025-05-21 11:24:10,388 - aiogram.event - INFO - Update id=557040031 is handled. Duration 67 ms by bot id=7415615009
+2025-05-21 11:24:12,850 - aiogram.event - INFO - Update id=557040032 is handled. Duration 227 ms by bot id=7415615009
+2025-05-21 11:24:19,293 - aiogram.event - INFO - Update id=557040033 is handled. Duration 113 ms by bot id=7415615009
+2025-05-21 11:24:22,796 - aiogram.event - INFO - Update id=557040034 is handled. Duration 145 ms by bot id=7415615009
+2025-05-21 11:24:26,933 - aiogram.event - INFO - Update id=557040035 is handled. Duration 68 ms by bot id=7415615009
+2025-05-21 11:27:33,146 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:27:33,148 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:27:33,149 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:27:38,731 - __main__ - INFO - Бот запущено
+2025-05-21 11:27:38,732 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:27:38,856 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:27:41,136 - aiogram.event - INFO - Update id=557040036 is handled. Duration 170 ms by bot id=7415615009
+2025-05-21 11:27:42,242 - aiogram.event - INFO - Update id=557040037 is handled. Duration 133 ms by bot id=7415615009
+2025-05-21 11:27:45,271 - aiogram.event - INFO - Update id=557040038 is not handled. Duration 4 ms by bot id=7415615009
+2025-05-21 11:27:45,272 - aiogram.event - ERROR - Cause exception while process update id=557040038 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/disp.py", line 34, in procces_add_notes
+    reply_markup= await kb.list_tegs(user_id=message.from_user.id))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/keyboard.py", line 17, in list_tegs
+    cursor = await db.execute('SELECT IFNULL(tags, '') FROM main WHERE user_id = ?', (user_id,))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: near ")": syntax error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-21 11:30:18,672 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:30:18,675 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:30:18,676 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:30:23,475 - __main__ - INFO - Бот запущено
+2025-05-21 11:30:23,477 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:30:23,601 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:30:23,992 - aiogram.event - INFO - Update id=557040039 is handled. Duration 196 ms by bot id=7415615009
+2025-05-21 11:30:25,036 - aiogram.event - INFO - Update id=557040040 is handled. Duration 139 ms by bot id=7415615009
+2025-05-21 11:30:28,037 - aiogram.event - INFO - Update id=557040041 is handled. Duration 69 ms by bot id=7415615009
+2025-05-21 11:31:16,730 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:31:16,731 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:31:16,732 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:31:21,429 - __main__ - INFO - Бот запущено
+2025-05-21 11:31:21,429 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:31:21,554 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:31:21,826 - aiogram.event - INFO - Update id=557040042 is handled. Duration 218 ms by bot id=7415615009
+2025-05-21 11:31:23,751 - aiogram.event - INFO - Update id=557040043 is handled. Duration 152 ms by bot id=7415615009
+2025-05-21 11:31:28,778 - aiogram.event - INFO - Update id=557040044 is handled. Duration 66 ms by bot id=7415615009
+2025-05-21 11:32:03,935 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:32:03,937 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:32:03,938 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:32:08,974 - __main__ - INFO - Бот запущено
+2025-05-21 11:32:08,975 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:32:09,101 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:32:09,474 - aiogram.event - INFO - Update id=557040045 is handled. Duration 321 ms by bot id=7415615009
+2025-05-21 11:32:10,705 - aiogram.event - INFO - Update id=557040046 is handled. Duration 173 ms by bot id=7415615009
+2025-05-21 11:32:13,698 - aiogram.event - INFO - Update id=557040047 is handled. Duration 61 ms by bot id=7415615009
+2025-05-21 11:32:31,501 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:32:31,502 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:32:31,503 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:32:36,262 - __main__ - INFO - Бот запущено
+2025-05-21 11:32:36,263 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:32:36,383 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:32:36,683 - aiogram.event - INFO - Update id=557040048 is handled. Duration 198 ms by bot id=7415615009
+2025-05-21 11:32:38,237 - aiogram.event - INFO - Update id=557040049 is handled. Duration 144 ms by bot id=7415615009
+2025-05-21 11:32:41,579 - aiogram.event - INFO - Update id=557040050 is handled. Duration 142 ms by bot id=7415615009
+2025-05-21 11:32:56,809 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:32:56,810 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:32:56,810 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:33:02,071 - __main__ - INFO - Бот запущено
+2025-05-21 11:33:02,072 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:33:02,198 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:33:02,409 - aiogram.event - INFO - Update id=557040051 is handled. Duration 159 ms by bot id=7415615009
+2025-05-21 11:33:03,716 - aiogram.event - INFO - Update id=557040052 is handled. Duration 136 ms by bot id=7415615009
+2025-05-21 11:33:06,388 - aiogram.event - INFO - Update id=557040053 is handled. Duration 63 ms by bot id=7415615009
+2025-05-21 11:33:39,933 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:33:39,934 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:33:39,934 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:33:45,226 - __main__ - INFO - Бот запущено
+2025-05-21 11:33:45,227 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:33:45,356 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:33:45,624 - aiogram.event - INFO - Update id=557040054 is handled. Duration 202 ms by bot id=7415615009
+2025-05-21 11:33:48,235 - aiogram.event - INFO - Update id=557040055 is handled. Duration 109 ms by bot id=7415615009
+2025-05-21 11:33:52,754 - aiogram.event - INFO - Update id=557040056 is handled. Duration 200 ms by bot id=7415615009
+2025-05-21 11:33:55,194 - aiogram.event - INFO - Update id=557040057 is handled. Duration 188 ms by bot id=7415615009
+2025-05-21 11:34:03,160 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 11:34:03,162 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:34:03,162 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 11:36:44,612 - __main__ - INFO - Бот запущено
+2025-05-21 11:36:44,613 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 11:36:44,744 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 11:36:45,376 - aiogram.event - INFO - Update id=557040058 is handled. Duration 153 ms by bot id=7415615009
+2025-05-21 11:36:46,515 - aiogram.event - INFO - Update id=557040059 is handled. Duration 119 ms by bot id=7415615009
+2025-05-21 11:36:49,709 - aiogram.event - INFO - Update id=557040060 is handled. Duration 131 ms by bot id=7415615009
+2025-05-21 11:36:58,837 - aiogram.event - INFO - Update id=557040061 is handled. Duration 277 ms by bot id=7415615009
+2025-05-21 11:37:01,613 - aiogram.event - INFO - Update id=557040062 is handled. Duration 279 ms by bot id=7415615009
+2025-05-21 11:37:03,772 - aiogram.event - INFO - Update id=557040063 is handled. Duration 115 ms by bot id=7415615009
+2025-05-21 11:37:12,842 - aiogram.event - INFO - Update id=557040064 is handled. Duration 209 ms by bot id=7415615009
+2025-05-21 11:37:14,625 - aiogram.event - INFO - Update id=557040065 is handled. Duration 454 ms by bot id=7415615009
+2025-05-21 11:37:17,421 - aiogram.event - INFO - Update id=557040066 is handled. Duration 63 ms by bot id=7415615009
+2025-05-21 11:37:31,356 - aiogram.event - INFO - Update id=557040067 is handled. Duration 216 ms by bot id=7415615009
+2025-05-21 12:23:59,479 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:23:59,484 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:23:59,485 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:24:04,627 - __main__ - INFO - Бот запущено
+2025-05-21 12:24:04,628 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:24:04,752 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:24:09,427 - aiogram.event - INFO - Update id=557040068 is handled. Duration 8 ms by bot id=7415615009
+2025-05-21 12:25:58,944 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:25:58,945 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:25:58,946 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:26:03,955 - __main__ - INFO - Бот запущено
+2025-05-21 12:26:03,957 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:26:04,080 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:26:04,131 - aiogram.event - INFO - Update id=557040069 is not handled. Duration 4 ms by bot id=7415615009
+2025-05-21 12:26:04,131 - aiogram.event - ERROR - Cause exception while process update id=557040069 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/disp.py", line 69, in list_notes
+    text_new += text + "\n"
+                ~~~~~^~~~~~
+TypeError: can only concatenate tuple (not "str") to tuple
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-21 12:26:17,455 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:26:17,456 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:26:17,457 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:26:22,344 - __main__ - INFO - Бот запущено
+2025-05-21 12:26:22,345 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:26:22,469 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:26:23,056 - aiogram.event - INFO - Update id=557040070 is handled. Duration 5 ms by bot id=7415615009
+2025-05-21 12:26:35,785 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:26:35,786 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:26:35,786 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:26:42,104 - __main__ - INFO - Бот запущено
+2025-05-21 12:26:42,105 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:26:42,229 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:26:42,285 - aiogram.event - INFO - Update id=557040071 is handled. Duration 5 ms by bot id=7415615009
+2025-05-21 12:27:05,374 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:27:05,375 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:27:05,376 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:27:10,357 - __main__ - INFO - Бот запущено
+2025-05-21 12:27:10,358 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:27:10,477 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:27:10,686 - aiogram.event - INFO - Update id=557040072 is handled. Duration 160 ms by bot id=7415615009
+2025-05-21 12:27:47,425 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:27:47,427 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:27:47,428 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:27:52,878 - __main__ - INFO - Бот запущено
+2025-05-21 12:27:52,879 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:27:53,002 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:27:53,059 - aiogram.event - INFO - Update id=557040073 is not handled. Duration 5 ms by bot id=7415615009
+2025-05-21 12:27:53,060 - aiogram.event - ERROR - Cause exception while process update id=557040073 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/disp.py", line 70, in list_notes
+    text_new += i + " " + str(text[0]) + "\n"
+                ~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-21 12:28:15,451 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:28:15,452 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:28:15,452 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:28:19,977 - __main__ - INFO - Бот запущено
+2025-05-21 12:28:19,978 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:28:20,104 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:28:20,316 - aiogram.event - INFO - Update id=557040074 is handled. Duration 158 ms by bot id=7415615009
+2025-05-21 12:28:32,534 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:28:32,535 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:28:32,536 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:28:37,874 - __main__ - INFO - Бот запущено
+2025-05-21 12:28:37,875 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:28:38,048 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:28:38,261 - aiogram.event - INFO - Update id=557040075 is handled. Duration 153 ms by bot id=7415615009
+2025-05-21 12:47:46,939 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:47:46,940 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:47:46,941 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:47:52,881 - __main__ - INFO - Бот запущено
+2025-05-21 12:47:52,882 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:47:53,013 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:48:09,693 - aiogram.event - INFO - Update id=557040076 is handled. Duration 216 ms by bot id=7415615009
+2025-05-21 12:48:13,085 - aiogram.event - INFO - Update id=557040077 is not handled. Duration 6 ms by bot id=7415615009
+2025-05-21 12:48:13,085 - aiogram.event - ERROR - Cause exception while process update id=557040077 by bot id=7415615009
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/app/disp.py", line 89, in cmd_tegs
+    text_new += str(i) + ": " + str(text[0]) + "\n"
+                                    ~~~~^^^
+IndexError: string index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zefirka/zefirka/nott_manager/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: main.<locals>.handle_errors() missing 1 required positional argument: 'error'
+2025-05-21 12:49:01,595 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:49:01,597 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:49:01,597 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:49:06,662 - __main__ - INFO - Бот запущено
+2025-05-21 12:49:06,663 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:49:06,794 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:49:07,112 - aiogram.event - INFO - Update id=557040078 is handled. Duration 262 ms by bot id=7415615009
+2025-05-21 12:49:07,987 - aiogram.event - INFO - Update id=557040079 is handled. Duration 6 ms by bot id=7415615009
+2025-05-21 12:49:39,016 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:49:39,018 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:49:39,018 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:49:43,811 - __main__ - INFO - Бот запущено
+2025-05-21 12:49:43,811 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:49:43,938 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:49:43,993 - aiogram.event - INFO - Update id=557040080 is handled. Duration 6 ms by bot id=7415615009
+2025-05-21 12:50:45,049 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:50:45,051 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:50:45,052 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:51:03,288 - __main__ - INFO - Бот запущено
+2025-05-21 12:51:03,290 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:51:03,415 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:51:03,638 - aiogram.event - INFO - Update id=557040081 is handled. Duration 171 ms by bot id=7415615009
+2025-05-21 12:51:16,426 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 12:51:16,427 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:51:16,427 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 12:51:21,041 - __main__ - INFO - Бот запущено
+2025-05-21 12:51:21,042 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 12:51:21,163 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 12:51:21,379 - aiogram.event - INFO - Update id=557040082 is handled. Duration 167 ms by bot id=7415615009
+2025-05-21 17:24:21,157 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 17:24:21,210 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:24:21,212 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 17:24:30,074 - __main__ - INFO - Бот запущено
+2025-05-21 17:24:30,075 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 17:24:30,202 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:24:41,420 - aiogram.event - INFO - Update id=557040083 is handled. Duration 260 ms by bot id=7415615009
+2025-05-21 17:26:03,410 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 17:26:03,412 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:26:03,412 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 17:26:08,295 - __main__ - INFO - Бот запущено
+2025-05-21 17:26:08,296 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 17:26:08,423 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:26:08,781 - aiogram.event - INFO - Update id=557040084 is handled. Duration 307 ms by bot id=7415615009
+2025-05-21 17:26:11,526 - aiogram.event - INFO - Update id=557040085 is not handled. Duration 4 ms by bot id=7415615009
+2025-05-21 17:42:35,578 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 17:42:35,651 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:42:35,655 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-21 17:42:43,801 - __main__ - INFO - Бот запущено
+2025-05-21 17:42:43,802 - aiogram.dispatcher - INFO - Start polling
+2025-05-21 17:42:43,929 - aiogram.dispatcher - INFO - Run polling for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:42:44,942 - aiogram.event - INFO - Update id=557040086 is handled. Duration 251 ms by bot id=7415615009
+2025-05-21 17:42:49,565 - aiogram.event - INFO - Update id=557040087 is not handled. Duration 5 ms by bot id=7415615009
+2025-05-21 17:43:01,740 - aiogram.event - INFO - Update id=557040088 is handled. Duration 213 ms by bot id=7415615009
+2025-05-21 17:43:05,336 - aiogram.event - INFO - Update id=557040089 is not handled. Duration 4 ms by bot id=7415615009
+2025-05-21 17:43:09,178 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-05-21 17:43:09,179 - aiogram.dispatcher - INFO - Polling stopped for bot @gikmkgvr_bot id=7415615009 - 'test1'
+2025-05-21 17:43:09,180 - aiogram.dispatcher - INFO - Polling stopped

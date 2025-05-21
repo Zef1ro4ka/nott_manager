@@ -14,13 +14,13 @@ def main_kb():
 async def list_tegs(user_id):
     buttons = []
     async with aiosqlite.connect(DB.DB_Main) as db:
-        cursor = await db.execute('SELECT id, tags FROM main WHERE user_id = ?', (user_id,))
+        cursor = await db.execute('SELECT tags FROM main WHERE user_id = ?', (user_id,))
         tags = await cursor.fetchall()
-
-        if len(tags) != 0:
-            for tag_id, tag in tags:
-                btn = KeyboardButton(text=f'{tag_id}: {tag}')
-                buttons.append([btn])
+        tags_list = [row[0] for row in tags if row[0].strip() != '']
+        for tag in tags_list:
+            print(tag)
+            btn = KeyboardButton(text=f'{tag}')
+            buttons.append([btn])
         else:
             btn = KeyboardButton(text='Тегів ще не додано, введіть перший в чат')
             buttons.append([btn])

@@ -14,17 +14,17 @@ async def create_db():
 ''')
         await db.commit()
 
-async def add_notes(user_id, text, tags):
+async def add_notes(user_id, text, tags, date):
     async with aiosqlite.connect(DB_Main) as db:
         await db.execute('''
-                        INSERT INTO main (user_id, text, tags)
-                        VALUES(?, ?, ?)
-''', (user_id, text, tags,))
+                        INSERT INTO main (user_id, text, tags, date_created)
+                        VALUES(?, ?, ?, ?)
+''', (user_id, text, tags, date))
         await db.commit()
 
 async def check_tags(tag):
     async with aiosqlite.connect(DB_Main) as db:
-        cursor = await db.execute("ISELECT 1 FROM main WHERE tags = ?", (tag,))
+        cursor = await db.execute("SELECT 1 FROM main WHERE tags = ?", (tag,))
         exist = await cursor.fetchone()
 
         if not exist:
@@ -32,3 +32,13 @@ async def check_tags(tag):
             await db.commit()
         else:
             print("Такий тег вже існує")
+
+async def clear_tag(user_id):
+    async with aiosqlite.connect(DB_Main) as db:
+        await db.execute("UPDATE main SET tags = '' WHERE user_id = ?", (user_id,))
+        await db.commit()
+
+async def del_text(user_id, text):
+    async with aiosqlite.connect(DB_Main) as db:
+        await db.execute("DELETE FROM main WHERE user_id = ? AND text = ?", (user_id, text,))  
+        await db.commit()
